@@ -1,5 +1,5 @@
 ---
-id: "PRD-002"
+id: "PRD-001"
 title: "claude-codex v0.1.0 — initial release"
 type: "PRD"
 domain: "product-strategy"
@@ -15,7 +15,7 @@ target_version: "v0.1.0"
 
 > Build a public, opinionated, MIT-licensed discipline kit that turns AI-assisted coding into engineering practice. Ship a complete v0.1.0 with principles, interactive skills, and templates — modular, tool-agnostic, and dogfooded against its own rules during construction.
 
-> **Note on form:** This is a **retroactive PRD**. It documents what was built in v0.1.0 (and the v0.1.1 patch), why, and what was deferred. Future contributors should treat this as the **founding design document** — the artifact that captures original intent. Forward planning for v0.2.0 and beyond lives in [PRD-001](PRD-001-adoption-improvements.md).
+> **Note on form:** This is a **retroactive PRD**. It documents what was built in v0.1.0 (and the v0.1.1 patch), why, and what was deferred. Future contributors should treat this as the **founding design document** — the artifact that captures original intent. Forward planning for v0.2.0 and beyond lives in [PRD-002](PRD-002-adoption-improvements.md).
 
 ## Contents
 
@@ -134,7 +134,7 @@ A team can use principles without skills, or templates without principles, or al
 - **Choice:** The kit was built using its own discipline. Verification before claims. Tradeoffs articulated. Principles applied to the principle files themselves.
 - **Tradeoff:** Slower to build than vibe-coding the content would have been.
 - **Alternative considered:** Speed-ship a draft, polish later.
-- **Why rejected:** A discipline kit that wasn't built using its own discipline would have been a self-falsifying product. Dogfooding is the proof of concept. PRD-001 and PRD-002 (this document) are the visible evidence.
+- **Why rejected:** A discipline kit that wasn't built using its own discipline would have been a self-falsifying product. Dogfooding is the proof of concept. PRD-002 and PRD-001 (this document) are the visible evidence.
 
 #### Decision 7: folder split — `artifacts/` for kit-internal, `docs/` for user-facing convention
 
@@ -150,8 +150,8 @@ A team can use principles without skills, or templates without principles, or al
 - **No API or programmatic interface.** Markdown files only.
 - **No JavaScript runtime, build step, or package manager.**
 - **No comprehensive language coverage.** Only TypeScript and Rust in v0.1.0; Python and Go deferred.
-- **No PM-specific module.** Deferred to v0.3.0 in PRD-001.
-- **No adoption infrastructure** (CONTRIBUTING.md, CHANGELOG.md, issue templates). Deferred to v0.2.0 in PRD-001.
+- **No PM-specific module.** Deferred to v0.3.0 in PRD-002.
+- **No adoption infrastructure** (CONTRIBUTING.md, CHANGELOG.md, issue templates). Deferred to v0.2.0 in PRD-002.
 
 ---
 
@@ -221,7 +221,7 @@ Each skill has a `SKILL.md` with frontmatter (name, description), a detailed pro
 - Proprietary-information audit (grep across all files; found and fixed one instance of a stakeholder name leaked from build context).
 - Spelling consistency pass (v0.1.1 patch: unified "artefact" → "artifact" for US spelling).
 - Folder split (v0.1.1 patch: `artifacts/` for kit-internal planning, `docs/` reserved for user-facing convention and future kit-reader content).
-- Dogfooding artifacts: PRD-001 (forward planning) and PRD-002 (this retrospective).
+- Dogfooding artifacts: PRD-002 (forward planning) and PRD-001 (this retrospective).
 
 ---
 
@@ -263,8 +263,8 @@ Each skill has a `SKILL.md` with frontmatter (name, description), a detailed pro
 ### Added/modified in v0.1.1 patch
 
 - Folder rename: `docs/` → `artifacts/` (for kit's own planning)
-- New: `artifacts/PRD-001-adoption-improvements.md` (forward roadmap)
-- New: `artifacts/PRD-002-initial-release.md` (this document)
+- New: `artifacts/PRD-002-adoption-improvements.md` (forward roadmap)
+- New: `artifacts/PRD-001-initial-release.md` (this document)
 - Modified: `claude/documentation.md` — added "4 frontmatter rules" pithy callout
 - Modified: 5 files for `artefact` → `artifact` spelling consistency
 - Modified: `claude/git-workflow.md` — replaced stakeholder name leak with generic team reference
@@ -291,7 +291,7 @@ Each skill has a `SKILL.md` with frontmatter (name, description), a detailed pro
 
 ### Qualitative — design proof points
 
-- **Dogfooded against its own rules during construction.** This PRD and PRD-001 are the visible evidence — both follow the kit's PRD template, frontmatter schema, audit-log conventions.
+- **Dogfooded against its own rules during construction.** This PRD and PRD-002 are the visible evidence — both follow the kit's PRD template, frontmatter schema, audit-log conventions.
 - **Modular adoption verified.** Each principle file passes the "could a team adopt only this file?" check.
 - **Tool portability documented.** ADAPTERS.md covers the five most common alternative agents.
 
@@ -303,7 +303,7 @@ Each skill has a `SKILL.md` with frontmatter (name, description), a detailed pro
 
 ### What was NOT measured at launch (and is therefore unknown)
 
-- External adoption signals (stars, forks, PRs, mentions) — accumulate after launch; tracking responsibility shifts to PRD-001.
+- External adoption signals (stars, forks, PRs, mentions) — accumulate after launch; tracking responsibility shifts to PRD-002.
 - Discoverability via GitHub search — depends on time and topic adoption; baseline TBD.
 - Real-world impact on AI-coding output quality — requires longitudinal study or external case reports.
 
@@ -328,7 +328,7 @@ Each skill has a `SKILL.md` with frontmatter (name, description), a detailed pro
 
 **Mitigation:**
 - Hard cutoff at v0.1.0 contents (9 + 6 + 5 + adapters + license + readme).
-- Deferred adoption infrastructure (CONTRIBUTING, CHANGELOG, issue templates) to v0.2.0 — formally captured in [PRD-001](PRD-001-adoption-improvements.md).
+- Deferred adoption infrastructure (CONTRIBUTING, CHANGELOG, issue templates) to v0.2.0 — formally captured in [PRD-002](PRD-002-adoption-improvements.md).
 - Deferred Python, Go, and PM module to v0.3.0.
 
 **Status:** RESOLVED. v0.1.0 shipped with disciplined scope; future expansion has an explicit phased plan.
@@ -358,7 +358,7 @@ Each skill has a `SKILL.md` with frontmatter (name, description), a detailed pro
 
 **Risk:** v0.1.0 implicitly targets the individual-contributor engineer. Tech PMs and team leads, declared as a target audience, have no entry point speaking to their concerns.
 
-**Mitigation:** Explicitly captured in [PRD-001](PRD-001-adoption-improvements.md) as Phase 1 (`START-HERE.md` with persona paths) and Phase 2 (`claude/pm-workflow.md`).
+**Mitigation:** Explicitly captured in [PRD-002](PRD-002-adoption-improvements.md) as Phase 1 (`START-HERE.md` with persona paths) and Phase 2 (`claude/pm-workflow.md`).
 
 **Status:** DEFERRED to v0.2.0 / v0.3.0 with a clear plan.
 
@@ -366,13 +366,13 @@ Each skill has a `SKILL.md` with frontmatter (name, description), a detailed pro
 
 **Risk:** Some principle files reference patterns (e.g., "the synchronous-wait deadlock," "the SPA 200-OK trap") without telling the story. A reader without that context gets the rule but not the visceral reason.
 
-**Mitigation:** Case studies and "from the trenches" stories planned for v0.4.0 in PRD-001 Phase 3.
+**Mitigation:** Case studies and "from the trenches" stories planned for v0.4.0 in PRD-002 Phase 3.
 
 **Status:** DEFERRED with a plan.
 
 ### Open questions surfaced during the build
 
-- How aggressive should the kit be in cross-linking between principle files? (Current: light; PRD-001 may revisit.)
+- How aggressive should the kit be in cross-linking between principle files? (Current: light; PRD-002 may revisit.)
 - Should there be a `bin/` or `scripts/` directory for installation helpers? (Current: no; `setup.sh` planned for v0.3.0 as a single root file.)
 - How should the kit handle version pinning for users who want to depend on a specific release? (Current: git tags; documented in CLAUDE.md "Versioning of this kit" section.)
 
@@ -397,8 +397,8 @@ The kit's "UI" is the GitHub repository surface — repo page, README rendering,
 | 11 | Verify no proprietary terms in any file | Grep across all files for the build-context project names, vendor names, and people names returns no matches | PASS (after audit + 1 fix) |
 | 12 | Verify consistent spelling | `grep -r 'artefact' --include='*.md'` returns no matches | PASS (after v0.1.1 patch) |
 | 13 | Clone repo locally; run `cp templates/CLAUDE.md.starter ./CLAUDE.md` | Starter file copies cleanly; placeholders visible for project-specific values | PASS |
-| 14 | Open `artifacts/PRD-001-adoption-improvements.md` | Forward roadmap visible; frontmatter validates | PASS |
-| 15 | Open `artifacts/PRD-002-initial-release.md` (this file) | Retrospective design doc visible; frontmatter validates | PASS |
+| 14 | Open `artifacts/PRD-002-adoption-improvements.md` | Forward roadmap visible; frontmatter validates | PASS |
+| 15 | Open `artifacts/PRD-001-initial-release.md` (this file) | Retrospective design doc visible; frontmatter validates | PASS |
 | 16 | Verify GitHub topics configured | At least 5 relevant topics listed on repo page | PASS (10 topics) |
 | 17 | Verify repo is public | Anonymous user can clone over HTTPS | PASS |
 

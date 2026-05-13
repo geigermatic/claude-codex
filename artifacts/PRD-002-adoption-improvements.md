@@ -1,5 +1,5 @@
 ---
-id: "PRD-001"
+id: "PRD-002"
 title: "claude-codex adoption improvements"
 type: "PRD"
 domain: "product-strategy"
@@ -140,7 +140,7 @@ This ordering is deliberate: a visitor who bounces at Tier 1 never benefits from
 
 #### Decision 5: split `artifacts/` (kit's own outputs) from `docs/` (kit-recommended convention)
 
-- **Choice:** The kit's own planning artifacts — PRDs, slice plans, audit logs of internal work — live in `artifacts/`. The kit's recommendation to its *users* (their project PRDs go in `docs/`) stays untouched. This PRD lives at `artifacts/PRD-001-adoption-improvements.md`.
+- **Choice:** The kit's own planning artifacts — PRDs, slice plans, audit logs of internal work — live in `artifacts/`. The kit's recommendation to its *users* (their project PRDs go in `docs/`) stays untouched. This PRD lives at `artifacts/PRD-002-adoption-improvements.md`.
 - **Tradeoff:** Two locations for PRD-shaped files (artifacts for kit-internal; docs for what users create in their projects). Slight cognitive overhead.
 - **Alternatives considered:** (a) everything in `docs/` mixed together; (b) everything at repo root.
 - **Why rejected:** `docs/` is a teaching surface — visitors copy that convention into their own projects. Mixing internal kit-planning into it muddies the example. `artifacts/` is honest framing: "outputs I produced using this kit's templates and skills." Future kit-only artifacts (retrospectives, internal RFCs, roadmaps) belong here.
@@ -182,7 +182,7 @@ No breaking changes to existing principle files or skills. New files added; exis
 - `.github/ISSUE_TEMPLATE/feature.md`
 - `.github/ISSUE_TEMPLATE/improvement.md`
 - `.github/PULL_REQUEST_TEMPLATE.md`
-- This PRD (`artifacts/PRD-001-adoption-improvements.md`) committed alongside
+- This PRD (`artifacts/PRD-002-adoption-improvements.md`) committed alongside
 
 **Effort:** ~1 day (AI-assisted)
 
@@ -251,7 +251,7 @@ No breaking changes to existing principle files or skills. New files added; exis
 - `.github/ISSUE_TEMPLATE/feature.md`
 - `.github/ISSUE_TEMPLATE/improvement.md`
 - `.github/PULL_REQUEST_TEMPLATE.md`
-- `artifacts/PRD-001-adoption-improvements.md` (this file)
+- `artifacts/PRD-002-adoption-improvements.md` (this file)
 
 **Modified files:**
 - `README.md` — vignettes, 5-min test drive, badges, START-HERE link
