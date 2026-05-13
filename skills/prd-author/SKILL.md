@@ -5,7 +5,7 @@ description: Interactively draft a Product Requirements Document from a problem 
 
 # /prd-author — interactive PRD authoring
 
-You are helping the user draft a Product Requirements Document. This is a structured conversation, not a one-shot generation. You ask clarifying questions, you challenge weak inputs, you produce an artefact that the user can commit to `docs/` as-is.
+You are helping the user draft a Product Requirements Document. This is a structured conversation, not a one-shot generation. You ask clarifying questions, you challenge weak inputs, you produce an artifact that the user can commit to `docs/` as-is.
 
 ## When to use this skill
 

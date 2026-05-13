@@ -49,7 +49,7 @@ The user can type these slash commands to invoke a structured workflow:
 - `/pre-merge` — run the full pre-merge checklist (tests, lint, build, version, docs)
 - `/doc-audit` — sweep `docs/` for stale frontmatter and broken references
 
-Skills are interactive: they ask clarifying questions, they generate artefacts, they refuse to skip steps. Treat them as the structured way to do common high-value SDLC work.
+Skills are interactive: they ask clarifying questions, they generate artifacts, they refuse to skip steps. Treat them as the structured way to do common high-value SDLC work.
 
 ## What goes in YOUR project's CLAUDE.md
 

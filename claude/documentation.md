@@ -29,9 +29,22 @@ The bar: anyone reading the docs should be able to act on them without verifying
 
 ---
 
+## The 4 frontmatter rules — pithy summary
+
+The expanded explanations live in §5-7. If you remember nothing else, remember these four.
+
+1. **Editing body:** Update `last_verified` to today. If accuracy changes, update `status` and `confidence`. Add an audit log entry.
+2. **Creating new doc:** Follow the schema in `templates/doc-audit.md`. Add an audit block at the bottom.
+3. **Code invalidates doc claims:** Update `status` to `drift` and note the drift in the audit block. At minimum, flag it — don't silently leave the doc claiming something the code no longer does.
+4. **Never delete frontmatter.** Required fields: `id`, `title`, `type`, `applies_to`, `status`, `confidence`, `last_verified`. PRDs also need `implemented`.
+
+These four rules cover most of the doc-maintenance discipline. Pre-merge (see `skills/pre-merge/` §9) verifies them.
+
+---
+
 ## 2. PRD — Product Requirements Document
 
-PRDs describe **what we're building and why**. They precede implementation. They are the artefact that aligns the team on scope, design, and acceptance criteria.
+PRDs describe **what we're building and why**. They precede implementation. They are the artifact that aligns the team on scope, design, and acceptance criteria.
 
 ### When to write a PRD
 

@@ -17,7 +17,7 @@ Default LLM-assisted coding has predictable failure modes:
 - The agent **skips the boring discipline**. No failing test first. No version bump. No lint. No documentation update. Ship it.
 - The agent **gives generic answers**. No tradeoff articulation. No confidence calibration. No tying recommendations to the actual codebase in front of it.
 
-This kit fixes those failure modes through three artefacts:
+This kit fixes those failure modes through three artifacts:
 
 1. **Principles** — modular, opinionated rules that load into your agent's context (`CLAUDE.md` and the `claude/` directory).
 2. **Skills** — interactive, invokable workflows that walk the agent and the user through high-value SDLC moments: writing a PRD, planning a TDD slice, fixing a bug test-first, reviewing before merge.

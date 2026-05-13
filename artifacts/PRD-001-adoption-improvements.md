@@ -13,9 +13,9 @@ target_version: "v0.2.0"
 
 # claude-codex adoption improvements
 
-> Lower the friction between "this kit exists" and "this kit is in my project." Ship adoption-critical artefacts (entry-point guide, visible skill output, GitHub polish, language breadth) so first-time visitors can evaluate and commit within 5 minutes.
+> Lower the friction between "this kit exists" and "this kit is in my project." Ship adoption-critical artifacts (entry-point guide, visible skill output, GitHub polish, language breadth) so first-time visitors can evaluate and commit within 5 minutes.
 
-This PRD is itself a dogfooding artefact: the first real document written using the kit's own `templates/PRD.md`. The audit log records its own creation via `/prd-author`.
+This PRD is itself a dogfooding artifact: the first real document written using the kit's own `templates/PRD.md`. The audit log records its own creation via `/prd-author`.
 
 ## Contents
 
@@ -93,14 +93,14 @@ claude-codex/
 - No visible skill output (no transcript excerpts, no recordings)
 - No Python or Go language guides
 - No PM-specific workflow guide
-- No `examples/` directory with real artefacts (PRDs, slice plans, audit logs)
+- No `examples/` directory with real artifacts (PRDs, slice plans, audit logs)
 - No badges in README signaling license, version, stars, build status
 
 ---
 
 ## Design
 
-The adoption-improvement work breaks into **four tiers ordered by leverage**. Each tier ships as a discrete release so the kit gains visible version momentum and we can stop at any tier with a stable, useful artefact.
+The adoption-improvement work breaks into **four tiers ordered by leverage**. Each tier ships as a discrete release so the kit gains visible version momentum and we can stop at any tier with a stable, useful artifact.
 
 ### Approach: stack the credibility before the depth
 
@@ -110,7 +110,7 @@ This ordering is deliberate: a visitor who bounces at Tier 1 never benefits from
 
 ### Key decisions
 
-#### Decision 1: separate entry-point artefacts from README
+#### Decision 1: separate entry-point artifacts from README
 
 - **Choice:** Add a `START-HERE.md` with persona paths rather than expanding the README.
 - **Tradeoff:** Two files for the visitor to navigate. Mitigated by README explicitly linking *"New here? Start with [START-HERE.md](START-HERE.md)."*
@@ -138,19 +138,19 @@ This ordering is deliberate: a visitor who bounces at Tier 1 never benefits from
 - **Alternative considered:** extract a `claude/languages/_shared.md` for cross-language patterns.
 - **Why rejected:** premature abstraction. Only 4 languages even after this work. The rule-of-three says wait for the 5th language before extracting shared structure. Per `claude/principles.md` §4.1.
 
-#### Decision 5: PRDs and adoption artefacts live in `docs/`, not at root
+#### Decision 5: split `artifacts/` (kit's own outputs) from `docs/` (kit-recommended convention)
 
-- **Choice:** This PRD lives at `docs/PRD-adoption-improvements.md`. Future PRDs, case studies, and FAQs go in `docs/`.
-- **Tradeoff:** One more directory layer.
-- **Alternative considered:** PRDs at root.
-- **Why rejected:** mirrors the convention the kit recommends to consumers (PRDs in `docs/`). Dogfooding our own template. Visitors who explore `docs/` see real artefacts using the kit's templates.
+- **Choice:** The kit's own planning artifacts — PRDs, slice plans, audit logs of internal work — live in `artifacts/`. The kit's recommendation to its *users* (their project PRDs go in `docs/`) stays untouched. This PRD lives at `artifacts/PRD-001-adoption-improvements.md`.
+- **Tradeoff:** Two locations for PRD-shaped files (artifacts for kit-internal; docs for what users create in their projects). Slight cognitive overhead.
+- **Alternatives considered:** (a) everything in `docs/` mixed together; (b) everything at repo root.
+- **Why rejected:** `docs/` is a teaching surface — visitors copy that convention into their own projects. Mixing internal kit-planning into it muddies the example. `artifacts/` is honest framing: "outputs I produced using this kit's templates and skills." Future kit-only artifacts (retrospectives, internal RFCs, roadmaps) belong here.
 
 ### Contract changes
 
 No breaking changes to existing principle files or skills. New files added; existing files preserved.
 
 **Version bump schedule:**
-- `v0.2.0` after Phase 1 ships (introduces `START-HERE.md`, `docs/`, `.github/`)
+- `v0.2.0` after Phase 1 ships (introduces `START-HERE.md`, `artifacts/`, `.github/`)
 - `v0.3.0` after Phase 2 ships (adds Python, Go, PM module, `ESSENTIALS.md`)
 - `v0.4.0` after Phase 3 ships (case studies, FAQ, examples)
 - `v0.5.0` or `v1.0.0` after Phase 4, depending on adoption signals
@@ -182,7 +182,7 @@ No breaking changes to existing principle files or skills. New files added; exis
 - `.github/ISSUE_TEMPLATE/feature.md`
 - `.github/ISSUE_TEMPLATE/improvement.md`
 - `.github/PULL_REQUEST_TEMPLATE.md`
-- This PRD (`docs/PRD-adoption-improvements.md`) committed alongside
+- This PRD (`artifacts/PRD-001-adoption-improvements.md`) committed alongside
 
 **Effort:** ~1 day (AI-assisted)
 
@@ -251,7 +251,7 @@ No breaking changes to existing principle files or skills. New files added; exis
 - `.github/ISSUE_TEMPLATE/feature.md`
 - `.github/ISSUE_TEMPLATE/improvement.md`
 - `.github/PULL_REQUEST_TEMPLATE.md`
-- `docs/PRD-adoption-improvements.md` (this file)
+- `artifacts/PRD-001-adoption-improvements.md` (this file)
 
 **Modified files:**
 - `README.md` — vignettes, 5-min test drive, badges, START-HERE link
@@ -376,4 +376,4 @@ Phase 1 is complete when items 1-12 pass. Each subsequent phase appends checks 1
 
 | Date       | Reviewer     | Status   | Notes                                                           |
 |------------|--------------|----------|-----------------------------------------------------------------|
-| 2026-05-13 | @geigermatic | created  | Initial draft. Authored via the kit's `/prd-author` skill as a dogfooding artefact. |
+| 2026-05-13 | @geigermatic | created  | Initial draft. Authored via the kit's `/prd-author` skill as a dogfooding artifact. |
