@@ -15,18 +15,18 @@ target_version: "v0.1.0"
 
 > Build a public, opinionated, MIT-licensed discipline kit that turns AI-assisted coding into engineering practice. Ship a complete v0.1.0 with principles, interactive skills, and templates — modular, tool-agnostic, and dogfooded against its own rules during construction.
 
-> **Note on form:** This is a **retroactive PRD**. It documents what was built in v0.1.0 (and the v0.1.1 patch), why, and what was deferred. Future contributors should treat this as the **founding design document** — the artifact that captures original intent. Forward planning for v0.2.0 and beyond lives in [PRD-002](PRD-002-adoption-improvements.md).
+> The founding design document for claude-codex. Captures original intent, design decisions, scope boundaries, and acceptance criteria for the initial release. Forward planning for v0.2.0 and beyond lives in [PRD-002](PRD-002-adoption-improvements.md).
 
 ## Contents
 
 1. [Problem](#problem)
-2. [Current State (before this work)](#current-state-before-this-work)
+2. [Current State](#current-state)
 3. [Design](#design)
-4. [Phases (as delivered)](#phases-as-delivered)
+4. [Phases](#phases)
 5. [Files Touched](#files-touched)
 6. [Metrics](#metrics)
-7. [Risks (encountered and resolved)](#risks-encountered-and-resolved)
-8. [Manual UI Test Checklist (as-launched verification)](#manual-ui-test-checklist-as-launched-verification)
+7. [Risks](#risks)
+8. [Manual UI Test Checklist](#manual-ui-test-checklist)
 9. [Audit log](#audit-log)
 
 ---
@@ -54,7 +54,7 @@ Nothing combined: prescriptive principles + interactive workflows + reusable tem
 
 ---
 
-## Current State (before this work)
+## Current State
 
 A snapshot of the landscape v0.1.0 was launching into:
 
@@ -155,7 +155,7 @@ A team can use principles without skills, or templates without principles, or al
 
 ---
 
-## Phases (as delivered)
+## Phases
 
 ### Phase 1 — Conception and structural critique
 
@@ -221,7 +221,7 @@ Each skill has a `SKILL.md` with frontmatter (name, description), a detailed pro
 - Proprietary-information audit (grep across all files; found and fixed one instance of a stakeholder name leaked from build context).
 - Spelling consistency pass (v0.1.1 patch: unified "artefact" → "artifact" for US spelling).
 - Folder split (v0.1.1 patch: `artifacts/` for kit-internal planning, `docs/` reserved for user-facing convention and future kit-reader content).
-- Dogfooding artifacts: PRD-002 (forward planning) and PRD-001 (this retrospective).
+- Dogfooding artifacts: PRD-001 (this document) and PRD-002 (forward planning).
 
 ---
 
@@ -309,7 +309,7 @@ Each skill has a `SKILL.md` with frontmatter (name, description), a detailed pro
 
 ---
 
-## Risks (encountered and resolved)
+## Risks
 
 ### R1: Proprietary information leakage — HIGH
 
@@ -378,7 +378,7 @@ Each skill has a `SKILL.md` with frontmatter (name, description), a detailed pro
 
 ---
 
-## Manual UI Test Checklist (as-launched verification)
+## Manual UI Test Checklist
 
 The kit's "UI" is the GitHub repository surface — repo page, README rendering, file navigation, and the experience of cloning and using the kit. The following checks were performed at launch:
 
@@ -398,7 +398,7 @@ The kit's "UI" is the GitHub repository surface — repo page, README rendering,
 | 12 | Verify consistent spelling | `grep -r 'artefact' --include='*.md'` returns no matches | PASS (after v0.1.1 patch) |
 | 13 | Clone repo locally; run `cp templates/CLAUDE.md.starter ./CLAUDE.md` | Starter file copies cleanly; placeholders visible for project-specific values | PASS |
 | 14 | Open `artifacts/PRD-002-adoption-improvements.md` | Forward roadmap visible; frontmatter validates | PASS |
-| 15 | Open `artifacts/PRD-001-initial-release.md` (this file) | Retrospective design doc visible; frontmatter validates | PASS |
+| 15 | Open `artifacts/PRD-001-initial-release.md` (this file) | Founding design doc visible; frontmatter validates | PASS |
 | 16 | Verify GitHub topics configured | At least 5 relevant topics listed on repo page | PASS (10 topics) |
 | 17 | Verify repo is public | Anonymous user can clone over HTTPS | PASS |
 
@@ -410,4 +410,4 @@ All 17 launch-verification checks pass as of v0.1.1.
 
 | Date       | Reviewer     | Status    | Notes                                                                                    |
 |------------|--------------|-----------|------------------------------------------------------------------------------------------|
-| 2026-05-13 | @geigermatic | created   | Retroactive draft documenting v0.1.0 launch + v0.1.1 patch. Written using the kit's `templates/PRD.md`. |
+| 2026-05-13 | @geigermatic | created   | Initial founding design doc for v0.1.0 launch + v0.1.1 patch. Authored using the kit's `templates/PRD.md`. |
