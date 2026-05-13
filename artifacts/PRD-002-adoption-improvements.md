@@ -1,6 +1,6 @@
 ---
 id: "PRD-002"
-title: "claude-codex adoption improvements"
+title: "claude-craft adoption improvements"
 type: "PRD"
 domain: "product-strategy"
 applies_to: ["v0.x"]
@@ -11,7 +11,7 @@ implemented: false
 target_version: "v0.2.0"
 ---
 
-# claude-codex adoption improvements
+# claude-craft adoption improvements
 
 > Lower the friction between "this kit exists" and "this kit is in my project." Ship adoption-critical artifacts (entry-point guide, visible skill output, GitHub polish, language breadth) so first-time visitors can evaluate and commit within 5 minutes.
 
@@ -53,7 +53,7 @@ Adjacent gaps compound the problem:
 
 ## Current State
 
-**Repository:** `github.com/geigermatic/claude-codex`
+**Repository:** `github.com/geigermatic/claude-craft`
 **Version:** v0.1.0 (initial commit + a one-line cleanup)
 **License:** MIT
 **Visibility:** Public; 10 GitHub topics configured for SEO
@@ -61,7 +61,7 @@ Adjacent gaps compound the problem:
 ### Structure (verified 2026-05-13)
 
 ```
-claude-codex/
+claude-craft/
 ├── CLAUDE.md
 ├── README.md
 ├── ADAPTERS.md
@@ -230,7 +230,7 @@ No breaking changes to existing principle files or skills. New files added; exis
 - `adapters/cursor/.cursorrules` — pre-built ready-to-use Cursor configuration
 - `adapters/aider/.aider.conf.yml` — same for Aider
 - `adapters/continue/config.json.partial` — Continue snippet
-- GitHub Pages landing at `geigermatic.github.io/claude-codex`
+- GitHub Pages landing at `geigermatic.github.io/claude-craft`
 - Submissions to `awesome-claude-code`, `awesome-prompts`, `awesome-ai-coding` lists
 
 **Effort:** ~0.5 day
@@ -349,7 +349,7 @@ The "UI" of this product is the GitHub repository page, the README rendered in b
 
 | # | Step | Expected result |
 |---|------|-----------------|
-| 1 | Visit `github.com/geigermatic/claude-codex` as anonymous user | Description, topics, README load within 3s |
+| 1 | Visit `github.com/geigermatic/claude-craft` as anonymous user | Description, topics, README load within 3s |
 | 2 | Read README opening paragraph | Can answer "is this for me?" within 30 seconds |
 | 3 | Scroll to badges block | License, version, stars badges all render correctly |
 | 4 | Click "Start here" link in README | `START-HERE.md` loads; persona paths visible above the fold |

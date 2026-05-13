@@ -1,6 +1,6 @@
 ---
 id: "PRD-001"
-title: "claude-codex v0.1.0 — initial release"
+title: "claude-craft v0.1.0 — initial release"
 type: "PRD"
 domain: "product-strategy"
 applies_to: ["v0.1.0", "v0.1.1"]
@@ -11,11 +11,11 @@ implemented: true
 target_version: "v0.1.0"
 ---
 
-# claude-codex v0.1.0 — initial release
+# claude-craft v0.1.0 — initial release
 
 > Build a public, opinionated, MIT-licensed discipline kit that turns AI-assisted coding into engineering practice. Ship a complete v0.1.0 with principles, interactive skills, and templates — modular, tool-agnostic, and dogfooded against its own rules during construction.
 
-> The founding design document for claude-codex. Captures original intent, design decisions, scope boundaries, and acceptance criteria for the initial release. Forward planning for v0.2.0 and beyond lives in [PRD-002](PRD-002-adoption-improvements.md).
+> The founding design document for claude-craft. Captures original intent, design decisions, scope boundaries, and acceptance criteria for the initial release. Forward planning for v0.2.0 and beyond lives in [PRD-002](PRD-002-adoption-improvements.md).
 
 ## Contents
 
@@ -166,7 +166,7 @@ Key outputs of this phase: the three-pillar architecture (principles / skills / 
 ### Phase 2 — Repo bootstrap
 
 **Delivered:**
-- Public GitHub repo at `geigermatic/claude-codex`
+- Public GitHub repo at `geigermatic/claude-craft`
 - LICENSE (MIT), .gitignore, directory tree
 - Initial README with positioning, structure overview, and quickstart
 - GitHub topics for discoverability
@@ -384,7 +384,7 @@ The kit's "UI" is the GitHub repository surface — repo page, README rendering,
 
 | # | Step | Expected result | Status |
 |---|------|-----------------|--------|
-| 1 | Visit github.com/geigermatic/claude-codex anonymous | Repo loads; description, topics, and README all render | PASS |
+| 1 | Visit github.com/geigermatic/claude-craft anonymous | Repo loads; description, topics, and README all render | PASS |
 | 2 | Read README opening section | First-time visitor can answer "is this for me?" in < 1 minute | PASS |
 | 3 | Verify license file present at repo root | `LICENSE` file with MIT text visible | PASS |
 | 4 | Browse `claude/` directory | All 7 principle files + `languages/` subdirectory present | PASS |

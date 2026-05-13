@@ -70,10 +70,10 @@ If the same error code shows up in multiple places, give them distinct sub-codes
 
 **Fix:**
 1. Increase pool size in `config/database.ts` (or wherever applicable).
-2. Audit any sync-wait patterns (Job A waits on Job B on the same pool) — see `claude-codex/claude/testing.md` §11.
+2. Audit any sync-wait patterns (Job A waits on Job B on the same pool) — see `claude-craft/claude/testing.md` §11.
 3. Add a metric alerting on pool wait time exceeding {threshold}.
 
-**Prevention:** Apply the synchronous-wait concurrency check at PR review time (see `claude-codex/claude/testing.md` §11).
+**Prevention:** Apply the synchronous-wait concurrency check at PR review time (see `claude-craft/claude/testing.md` §11).
 
 **Verified:** {YYYY-MM-DD} by {@user} in incident #234.
 

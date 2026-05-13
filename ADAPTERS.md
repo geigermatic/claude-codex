@@ -1,4 +1,4 @@
-# Adapters — using claude-codex with other agents
+# Adapters — using claude-craft with other agents
 
 This kit is tuned for **Claude Code**, but the principles are agent-agnostic. With minor adaptation, you can use the same discipline layer with Cursor, Aider, Cline, Continue, Codex, or any other coding agent.
 
@@ -98,7 +98,7 @@ The `skills/` workflows assume Claude Code's specific tools. Here's how to trans
 | Cline | Custom prompts / tasks |
 | Continue | Slash commands in `config.json` |
 
-**To port a claude-codex skill** (e.g., `/prd-author`):
+**To port a claude-craft skill** (e.g., `/prd-author`):
 
 1. Copy the body of `skills/prd-author/SKILL.md`.
 2. Strip the frontmatter (`name`, `description`).
@@ -198,12 +198,12 @@ Save this as `.cursorrules` in your project root. Cursor auto-loads it.
 ```yaml
 # .aider.conf.yml
 read:
-  - claude-codex/claude/EPISTEMICS.md
-  - claude-codex/claude/principles.md
-  - claude-codex/claude/testing.md
-  - claude-codex/claude/security.md
-  - claude-codex/claude/git-workflow.md
-  - claude-codex/claude/documentation.md
+  - claude-craft/claude/EPISTEMICS.md
+  - claude-craft/claude/principles.md
+  - claude-craft/claude/testing.md
+  - claude-craft/claude/security.md
+  - claude-craft/claude/git-workflow.md
+  - claude-craft/claude/documentation.md
 ```
 
 Or concatenate into a single file and `read:` that.
@@ -233,4 +233,4 @@ For multi-turn API apps, consider:
 
 ## Contributing adapter improvements
 
-If you use claude-codex with another agent and discover a better mapping, open a PR adding to this file. The goal is to make it easy for any developer to adopt the discipline regardless of which agent they're paying for.
+If you use claude-craft with another agent and discover a better mapping, open a PR adding to this file. The goal is to make it easy for any developer to adopt the discipline regardless of which agent they're paying for.

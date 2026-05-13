@@ -1,6 +1,6 @@
-# claude-codex — engineering practices for AI-assisted coding
+# claude-craft — engineering practices for AI-assisted coding
 
-You are operating under the **claude-codex** discipline kit. The rules below override default behavior. Read them as a senior engineer reads team conventions: not optional, but with judgment for edge cases.
+You are operating under the **claude-craft** discipline kit. The rules below override default behavior. Read them as a senior engineer reads team conventions: not optional, but with judgment for edge cases.
 
 ## How this kit is organized
 

@@ -1,6 +1,6 @@
-# claude-codex
+# claude-craft
 
-**A codex of engineering practices for Claude Code — TDD, verification, code quality, and SDLC discipline.**
+**Engineering craft for Claude Code — TDD, verification, code quality, and SDLC discipline.**
 
 Turn vibe coding into engineering. This kit captures the principles, skills, and templates that separate world-class AI-assisted software development from "ask the LLM and hope."
 
@@ -30,7 +30,7 @@ Used together, these turn an enthusiastic-but-undisciplined agent into something
 ## What's in the box
 
 ```
-claude-codex/
+claude-craft/
 ├── CLAUDE.md                          # entry point — imports the principles
 ├── claude/
 │   ├── EPISTEMICS.md                  # how the agent should THINK: verify, don't guess
@@ -69,20 +69,20 @@ claude-codex/
 
 ```bash
 cd your-project/
-git clone https://github.com/geigermatic/claude-codex.git .claude-codex
-cp .claude-codex/templates/CLAUDE.md.starter ./CLAUDE.md
+git clone https://github.com/geigermatic/claude-craft.git .claude-craft
+cp .claude-craft/templates/CLAUDE.md.starter ./CLAUDE.md
 # Edit CLAUDE.md to add your project's specifics, then commit.
 ```
 
-Claude Code auto-loads `CLAUDE.md` from your project root. The starter file imports the principles via `@.claude-codex/claude/...` references — your agent now operates with the full discipline layer active.
+Claude Code auto-loads `CLAUDE.md` from your project root. The starter file imports the principles via `@.claude-craft/claude/...` references — your agent now operates with the full discipline layer active.
 
 To use a skill: type `/prd-author`, `/tdd-slice`, `/bug-fix-tdd`, `/verify-claim`, `/pre-merge`, or `/doc-audit` in chat.
 
 ### Option 2 — Install globally for all your Claude Code projects
 
 ```bash
-git clone https://github.com/geigermatic/claude-codex.git ~/.claude/codex
-# Reference ~/.claude/codex/claude/*.md in your ~/.claude/CLAUDE.md (user-level)
+git clone https://github.com/geigermatic/claude-craft.git ~/.claude/craft
+# Reference ~/.claude/craft/claude/*.md in your ~/.claude/CLAUDE.md (user-level)
 ```
 
 ### Option 3 — Use the principles with another agent
