@@ -1,0 +1,153 @@
+---
+# This is a STARTER CLAUDE.md for a new project.
+# Copy it to your project root as CLAUDE.md, then fill in the project specifics.
+# Sections marked with {{...}} need your input.
+---
+
+# {{Project Name}} — Claude Code Instructions
+
+{{One-paragraph description of the project. What is it, who uses it, what does it do?}}
+
+## How this project uses claude-codex
+
+This project follows the [claude-codex](https://github.com/geigermatic/claude-codex) discipline kit. The principles, skills, and templates from claude-codex are imported below — they apply to all work on this codebase.
+
+@.claude-codex/CLAUDE.md
+
+If you cloned claude-codex to a different path, update the import above. Common locations:
+- `.claude-codex/` (per-project, gitignored or submodule)
+- `~/.claude/codex/` (global, your home directory)
+
+## Project structure
+
+```
+{{project-root}}/
+├── {{describe the major directories and what they contain}}
+├── ...
+```
+
+## Services / components
+
+{{For each service or major component, document:}}
+
+### {{Service Name}}
+
+- **Purpose**: {{what does it do}}
+- **Stack**: {{language, framework, key dependencies}}
+- **Port**: {{if applicable}}
+- **Entry point**: {{e.g., src/index.ts}}
+- **How to run locally**: {{exact command}}
+- **How to test**: {{exact command}}
+
+## Local development
+
+### Setup
+
+```bash
+{{the exact commands to set up a fresh checkout}}
+```
+
+### Running the stack
+
+```bash
+{{how to start everything locally}}
+```
+
+### Environment variables
+
+- `.env` is gitignored; defaults are in `{{path}}`
+- {{Document any non-obvious env vars and their purposes}}
+
+### Restarting services
+
+{{If you have multiple services, document how to restart each — and any gotchas like "must cd into the service directory first to load .env"}}
+
+## Testing
+
+### Unit tests
+
+```bash
+{{exact command for unit tests}}
+```
+
+### Integration / e2e
+
+```bash
+{{exact command if applicable}}
+```
+
+### Common test gotchas
+
+{{Document anything non-obvious:
+  - "Never use `npm test` — it runs vitest in watch mode and hangs"
+  - "Tests require Postgres running on localhost:5432"
+  - etc.}}
+
+## Versioning
+
+- **Version lives in**: `{{path to canonical version}}`
+- **Version shows in**: {{where users see it — UI footer, health endpoint, etc.}}
+- **Bump policy**: {{patch for fixes, minor for features, etc.}}
+
+## Branching and deploys
+
+- **Production branch**: `{{main}}`
+- **Beta / staging branch**: `{{beta}}` (if applicable)
+- **Deploy trigger**: {{e.g., "push to main triggers CI which deploys to prod"}}
+- **Branch naming**: {{e.g., `feat/...`, `fix/...`}}
+
+## Domain vocabulary
+
+{{The actual words your users and code use. Examples:}}
+
+- **{{Term}}**: {{definition}}
+- **{{Term}}**: {{definition}}
+
+## Active work and known gotchas
+
+{{Anything currently in flight that affects how Claude should approach work:
+  - "We're mid-migration from V1 to V2 of X — prefer V2 patterns in new code"
+  - "There's a known bug in Y that we're tracking; if you see it, don't try to fix it here"
+  - "External vendor Z is unreliable on Tuesdays; expect timeouts"
+}}
+
+## Project-specific conventions
+
+{{Conventions that override or extend the claude-codex defaults. Examples:}}
+
+- {{e.g., "Use `pnpm`, not `npm` or `yarn`"}}
+- {{e.g., "Tests live in `__tests__/` directories, not next to source"}}
+- {{e.g., "All HTTP endpoints must include a `tenant_id` in the request"}}
+
+## API testing
+
+{{If applicable: how to hit local APIs.}}
+
+```bash
+{{example curl command}}
+```
+
+## Authentication
+
+{{If your app has auth, document:
+  - Who issues tokens
+  - How dev mode differs from prod
+  - Known tradeoffs (e.g., "JWT not revalidated on cache hit; revocation takes up to 5 min")
+}}
+
+## Documentation
+
+{{Where docs live and how to find things:}}
+
+- **PRDs**: `docs/PRD-*.md`
+- **Architecture**: `docs/ARCH-*.md`
+- **Runbooks**: `docs/runbook-*.md`
+- **Error catalog**: `docs/ERRORS.md`
+
+## Anything Claude should remember
+
+{{Project-specific hard rules that aren't covered by claude-codex defaults. Examples:}}
+
+- {{e.g., "NEVER commit to `main` directly. Always go through PR."}}
+- {{e.g., "When adding a new connector, follow the V3 pattern in `docs/connector-v3.md`."}}
+- {{e.g., "Do not modify `vendor/` — it's third-party code mirrored from upstream."}}
