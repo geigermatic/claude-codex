@@ -333,7 +333,7 @@ Skip sections that don't apply. A typo fix doesn't need a Risks section.
 
 - The full reasoning for the change
 - Screenshots / GIFs of UI changes
-- Stakeholder context ("Sarah needs this for the Friday demo")
+- Stakeholder context ("the design team needs this for the Friday demo")
 - Test evidence ("Verified by running X with input Y, got Z")
 
 Commits explain *what* and *why-briefly*. PRs explain *why-in-detail* and *how to verify*.
